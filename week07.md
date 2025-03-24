@@ -27,20 +27,33 @@ The server replies with the Server Hello message taking into account the list of
 ## Python Code for Simulating TLS using SSL Library
 
 running sslmodule.py: 
-'''python
+
+
 import socket
+
 import ssl
+
 host = 'www.google.com'
+
 port = 443
 
+
 context = ssl.create_default_context()
+
 with socket.create_connection((host, port)) as sock:
+
     with context.wrap_socket(sock, server_hostname=host) as ssock:
+    
         print("SSL established. Peer:", ssock.getpeercert())
+        
         print("Cipher used:", ssock.cipher())
+        
         ssock.sendall(b"GET / HTTP/1.1\r\nHost: www.google.com\r\n\r\n")
+        
         data = ssock.recv(4096)
+        
         print("Received:", data.decode('utf-8', errors='ignore')) ''''
+        
 
 ![Image Description](./images/Week7_python.png)
 
