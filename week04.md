@@ -1,4 +1,4 @@
-## Weak04 Journal Activity
+## Week 04 Journal Activity
 ## Algorithm Used
 -By itself, the Cipher Block Chaining (CBC) mode increases encryption security by providing interdependent blocks. On attempting Internet transmission it introduces uniqueness by giving no two distinct ciphertexts from the same plaintext and IV equal in length. XORing the IV against the plaintext block and then encrypt the result with the key, is what the encryption part begins with. Each subsequent block is XORed with the last ciphertext, making a chaining to prevent the deciphering of the ciphertext by pattern recognition. That means to decrypt, decrypt using the key and XOR with the previous ciphertext or IV. Improving confidentiality comes from making it impossible for identical plaintext blocks to produce the same ciphertext. IV management care should be practiced so as not to fall prey to reuse pitfalls that may compromise encryption. More importantly, errors can cascade during decryption.
 ## Perform XOR bit by bit using the rules:
