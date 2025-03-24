@@ -110,5 +110,8 @@ Output:
 
 Hello, this is a secret message.
 
+![Image Description](./images/weak05_screenshot2.png)
+
+
 ## Insights and Reflections
 -The practical implementation of public key cryptography was learnt from working with RSA using OpenSSL. As an instance of how need to adapt to the updated cryptographic standards in OpenSSL 3.0. the rsautl uses it, but pkeyutl from where at the moment of writing OpenSSL 3.0. Also, the idea of separating the public and private keys is the underlying principle of symmetric encryption. However, confidentiality is maintained as encrypting with the public key ensures that only the private key can decrypt the message. Key management was also reinforced in this exercise as permanent loss of access to the encrypted data would result in the loss of the private key. Additionally, the limitations of RSA, e.g., inefficiency in large data encryption, emphasized the need for incorporation of hybrid, RSA equipped with symmetric algorithms. In summary, through applying RSA with OpenSSL, the processes of applying RSA in the area of secure communication and the underlying difficulties encountered when utilized are sorted out logically.
