@@ -1,0 +1,1 @@
+Thiz is a 24-byte sample text.
