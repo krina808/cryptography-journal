@@ -1,4 +1,8 @@
 ## Weak 05 Journal Activity
+
+## Algorithm Used: RSA with OpenSSL
+-A public key crypto system widely used in secure data transmission is called the RSA algorithm. There are two keys; a public key used for encryption, and a private key used to decrypt the contents. In key generator, two (large) prime numbers are selected and the product of which makes a modulus. The public key consists of the modulus and encryption exponent, the private key being the modulus and decryption exponent. The public key is used to encrypt the plaintext which gets converted to the ciphertext, and the private key is used to decrypt the message and bring it back to the plaintext. For secure encryption and decryption, that provided the data confidentiality, OpenSSL was used with pkeyutl. Public and private keys could be applied with the use of the -encrypt and -decrypt flags respectively within the OpenSSL framework.
+
 ## 1. RSA Key Generation using Python
 
 -Genertaed Python: 
@@ -105,3 +109,6 @@ cat decrypted_message.txt
 Output: 
 
 Hello, this is a secret message.
+
+## Insights and Reflections
+-The practical implementation of public key cryptography was learnt from working with RSA using OpenSSL. As an instance of how need to adapt to the updated cryptographic standards in OpenSSL 3.0. the rsautl uses it, but pkeyutl from where at the moment of writing OpenSSL 3.0. Also, the idea of separating the public and private keys is the underlying principle of symmetric encryption. However, confidentiality is maintained as encrypting with the public key ensures that only the private key can decrypt the message. Key management was also reinforced in this exercise as permanent loss of access to the encrypted data would result in the loss of the private key. Additionally, the limitations of RSA, e.g., inefficiency in large data encryption, emphasized the need for incorporation of hybrid, RSA equipped with symmetric algorithms. In summary, through applying RSA with OpenSSL, the processes of applying RSA in the area of secure communication and the underlying difficulties encountered when utilized are sorted out logically.
