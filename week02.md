@@ -23,63 +23,108 @@ ptography Journal
 - Installed Pycipher using:
   
   pip install pycipher
+  
 Decryption using Pycipher:
+
 from pycipher import Caesar
 
 ciphertext = "pjhigpaxp"
+
 decrypted_text = Caesar(15).decipher(ciphertext)
+
 print("Decrypted Text:", decrypted_text)
+
 •	Decrypted Text: "ausculter"
+
 Encryption to Verify:
+
 encrypted_text = Caesar(15).encipher("ausculter")
+
 print("Encrypted Text:", encrypted_text)
+
 •	Encrypted Text: "pjhigpaxp"
 
 ## 4. Caesar Decrypt Without Key
+
 •	Ciphertext: knuprdv
+
 •	Approach: Perform a brute-force shift from 1 to 25.
+
 Correct Decryption:
+
 •	After trying all shifts, the correct plaintext was identified using shift 7:
 o	Plaintext: "decrypt"
 
 ## 5. Implement Caesar Cipher in Python
 Python Implementation:
+
 def caesar_cipher(text, shift, encrypt=True):
+
     result = ""
+    
     for char in text:
+    
         if char.isalpha():
+        
             shift_amount = shift if encrypt else -shift
+            
             new_char = chr(((ord(char.lower()) - 97 + shift_amount) % 26) + 97)
+            
             result += new_char.upper() if char.isupper() else new_char
+            
         else:
+        
             result += char
+            
     return result
 
 # Example
+
 plain_text = "hello"
+
 shift_value = 3
+
 cipher_text = caesar_cipher(plain_text, shift_value)
+
 print("Encrypted:", cipher_text)
+
 print("Decrypted:", caesar_cipher(cipher_text, shift_value, encrypt=False))
+
 Results:
+
 •	Encrypted: "khoor"
+
 •	Decrypted: "hello"
 
 ## 6. Implement Brute Force for Caesar Cipher
+
 Brute Force Code:
+
 def brute_force_caesar(cipher_text):
+
     for shift in range(1, 26):
+
+    
         print(f"Shift {shift}: {caesar_cipher(cipher_text, shift, encrypt=False)}")
+        
 brute_force_caesar("knuprdv")
+
 •	Correct Decryption: "decrypt" (Shift 7)
 
+
 ## 7. Playfair Decrypt (Manual)
+
 •	Ciphertext: rpopizuliz
+
 •	Keyword: "program"
+
 Decryption Steps:
+
 1.	Constructed a 5x5 Playfair Matrix using "program" and the alphabet.
-2.	Applied Playfair cipher decryption rules.
-3.	Decrypted Text: "operation"
+   
+3.	Applied Playfair cipher decryption rules.
+   
+5.	Decrypted Text: "operation"
 
 ## 8. Rail Fence Decrypt (Manual)
 •	Ciphertext: irtngapconentehooisnapiaintecledlts
