@@ -7,7 +7,6 @@ While letter shifting did not seem like the most complex concept to grasp, I had
 ## Code Implementation: nano caesar_cipher.py
 Here is my implementation of the Caesar Cipher in Python:
 
-
 def caesar_cipher(text, shift, encrypt=True):
 
     result = ""
