@@ -44,7 +44,5 @@ Doing aes-128-cbc for 3s on 256 size blocks: 3296810 aes-128-cbc's in 2.80s
 Doing aes-128-cbc for 3s on 1024 size blocks: 940348 aes-128-cbc's in 2.98s
 ## Insights and Reflections
 AES in CBC mode is more secure and efficient compared to DES in ECB mode, as it introduces randomness using an Initialization Vector (IV) and prevents identical ciphertext for repeated plaintext. The padding issue observed in DES encryption highlights the importance of ensuring plaintext sizes are aligned with block sizes. Additionally, AES-128 demonstrated superior performance, making it a preferred choice for modern encryption needs.
-Screenshot
-Screenshot of the output:
-![Week 03 Screenshot](weak03_screenshot.png)
+
 
