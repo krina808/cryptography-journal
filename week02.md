@@ -143,23 +143,39 @@ Decryption Steps:
 3.	Decrypted Text: "thisisatestsuccess"
 
 ## 10. One Time Pad Brute Force
+
 •	Hexadecimal One Time Pad
+
 •	Decrypting rate: 1010 messages/sec
+
 •	Message Length: 300 characters
+
 Worst-Case Time Calculation:
+
 •	Total possibilities: 16300
+
 •	Time required: 16300/1010
+
 •	Result: Infeasible. The One Time Pad remains secure.
+
 ## 11. Optional Task - Rows/Columns and Caesar Decrypt
+
 •	Ciphertext: "lhszlplyueshadlletip"
+
 •	Applied a two-layer encryption:
+
 o	Rows/Columns Transposition using a 5-digit key.
+
 o	Caesar Cipher using a shift.
+
 Decryption Process:
+
 1.	Frequency Analysis: Assumed 'e' as the most frequent letter.
 2.	Reverse Caesar Shifts: Checked all shifts for readable text.
 3.	Decrypted Text: "thesolutionwascomplex"
+   
 ## Insights and Reflections
+
 1. **Understanding Classical Ciphers:**  
    -  Through the Caesar, Playfair and Rail Fence ciphers being worked manually, a good understanding was formed of how these early encryption methods function.  
  2. **Brute Force Vulnerability:**  
