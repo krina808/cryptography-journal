@@ -32,7 +32,7 @@ Encrypted Message: Rd Knwxy Ozwsfqi
 Decrypted Message: My First Journal
 
 Screenshot: 
-![Image Description](./images/weak01_screenshot.png)
+![Image Description](./images/week01_screenshot.png)
 
 
 ## Comparisons and Observations
