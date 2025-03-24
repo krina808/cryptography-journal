@@ -19,7 +19,7 @@ def caesar_cipher(text, shift, encrypt=True):
         else:
             result += char
     return result
-# Example usage
+## Example Usage
 plain_text = input("Enter your message: ")
 shift_value = int(input("Enter shift value (1-25): "))
 cipher_text = caesar_cipher(plain_text, shift_value)
@@ -35,7 +35,7 @@ The Caesar Cipher is incredibly insecure compared to modern ciphers such as AES 
 ## Challenges and Solutions
 Initially, since I tried to pass the empty value to int(), I got a ValueError. To resolve it, I enclosed it in a try – except and checked the type of entered value was an int before using the methods.
 
-## Reference
+## References
 Singh, S. (2006). The Science of Secrecy from Ancient Egypt to Quantum Cryptography. https://www.math.uci.edu/~brusso/freshman6.pdf 
 
 
