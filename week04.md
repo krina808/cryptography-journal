@@ -31,6 +31,9 @@ Plaintext (P) = 01110
 Python code created 
 
 # SBC Lookup Table (Example)
+run: nano sbc_cbc.py
+
+
 sbc_table = {
     "00000": ["10101", "11000", "00111", "01010", "01111", "10000", "11101", "00011"],
     "00001": ["00100", "11110", "10001", "01100", "11010", "10111", "00001", "01111"],
@@ -63,11 +66,14 @@ IV1 = "11011"
 ciphertext = cbc_encrypt(P1, K1, IV1)
 print("Ciphertext (C1):", ciphertext)
 
+![Image Description](./images/week04_screenshot1.png)
+
 
 Then run: python3 sbc_cbc.py
 
 ## Outut: 
 Ciphertext (C1): 1000000
+![Image Description](./images/week04_screenshot2.png)
 
 ## Insights & Reflections: 
 -For this activity I tuckered out a simple block cipher (SBC) in Cipher Block Chaining (CBC) mode to encrypt the plaintext. CBC mode introduced another way to provide additional security in case of identical blocks of plaintext by requiring use of an initialization vector (IV). In this way the patterns within encrypted data where otherwise possible are in this effectively mitigated, as in, for example, ECB. Implementing SBC I’ve noted how the XOR operations are used during the processes of encryption and chaining, the operations are based on the common term - the operation of XOR depends on both the plaintext between two ciphertext blocks. This induces diffusion and strengthens security of the encryption. Moreover, the restricted use of a small block size and insecure key generation were also highlighted as the inadequacies of SBC for genuine applications, therefore, they argued the necessity of using a more robust algorithms such as AES. In adding to the hands-on approach, it further helped me understand the relevance of the principle of randomness behind IV selection as well as key management struggles. Through this exercise I gained knowledge as to how encryption algorithms work in real life to ensure the security of sensitive information.
