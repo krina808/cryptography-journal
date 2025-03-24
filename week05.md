@@ -92,7 +92,7 @@ vUcs6Ub9OmYz01NI8n2WvQiR8mAx3Id/gbRoHZt3Q8ZWJQP6rxBdPuvhxGlHH/I6
 mH/vsiKZDL/jgG4QgVCyw78rqSB11ek24OgDUQ6f/ofzdZQUj2PtyzlnTqIjRA67
 zwIDAQAB
 -----END PUBLIC KEY-----
-
+![Image Description](./images/week05_screenshot.png)
 ## 4. RSA Encryption and Decryption in OpenSSL
 ✅ Encrypt Using pkeyutl
 
