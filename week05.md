@@ -1,4 +1,4 @@
-## Weak 05 Journal Activity
+## Week 05 Journal Activity
 
 ## Algorithm Used: RSA with OpenSSL
 -A public key crypto system widely used in secure data transmission is called the RSA algorithm. There are two keys; a public key used for encryption, and a private key used to decrypt the contents. In key generator, two (large) prime numbers are selected and the product of which makes a modulus. The public key consists of the modulus and encryption exponent, the private key being the modulus and decryption exponent. The public key is used to encrypt the plaintext which gets converted to the ciphertext, and the private key is used to decrypt the message and bring it back to the plaintext. For secure encryption and decryption, that provided the data confidentiality, OpenSSL was used with pkeyutl. Public and private keys could be applied with the use of the -encrypt and -decrypt flags respectively within the OpenSSL framework.
