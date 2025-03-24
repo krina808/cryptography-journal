@@ -28,17 +28,7 @@ sha256sum secretA.bin secretB.bin
 # Executions: 
 
 
-krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ openssl genpkey -paramfile dhparam.pem -out privateA.pem
-krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ openssl pkey -in privateA.pem -pubout -out publicA.pem
-krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ openssl genpkey -paramfile dhparam.pem -out privateB.pem
-krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ openssl pkey -in privateB.pem -pubout -out publicB.pem
-krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ openssl pkeyutl -derive -inkey privateA.pem -peerkey publicB.pem -out secretA.bin
-krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ openssl pkeyutl -derive -inkey privateB.pem -peerkey publicA.pem -out secretB.bin
-krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ sha256sum secretA.bin secretB.bin
-d41b409c2b3165690141d4efa369279901144d20a832e1f9baa7839a04fdc61f  secretA.bin
-d41b409c2b3165690141d4efa369279901144d20a832e1f9baa7839a04fdc61f  secretB.bin
-
-
+![Image Description](./images/week06_screenshot1.png)
 
 
 ## Diffie–Hellman in Python
@@ -75,6 +65,8 @@ else:
 Shared Secret (Alice): 34ca1283ee179bf1675f31ad14c80ca94bf29c96b2285275efb0f50b25540b42e465e27e830d7627d7b6f3e1c99e81f0b53148f8cd10420ab8623b193cc26449576724d3929e963a7393965fb5f2d9f94037b3058bbfb2d8eea5aad1ff67e19cf0e89f392b70af2de5fa183584534ea38aa843cf940c33aa43e5925d5beeaef931100aa42d6c3da38e8dcc630bf155a356cada2d0eaa55e016a0e45b1bb2771bfcd7840313958e57c40c554e8cc6c70f717802310161d6be3b124a23374373e42377fe31ba453d5b6b3650d8014775ad0d9d1db7cf1f9783f22cf25e1d5bc02dd10d559310a180c4fa4bf5765dff42a3bd9be381601703ed0570baaa89c1b6ac
 Shared Secret (Bob): 34ca1283ee179bf1675f31ad14c80ca94bf29c96b2285275efb0f50b25540b42e465e27e830d7627d7b6f3e1c99e81f0b53148f8cd10420ab8623b193cc26449576724d3929e963a7393965fb5f2d9f94037b3058bbfb2d8eea5aad1ff67e19cf0e89f392b70af2de5fa183584534ea38aa843cf940c33aa43e5925d5beeaef931100aa42d6c3da38e8dcc630bf155a356cada2d0eaa55e016a0e45b1bb2771bfcd7840313958e57c40c554e8cc6c70f717802310161d6be3b124a23374373e42377fe31ba453d5b6b3650d8014775ad0d9d1db7cf1f9783f22cf25e1d5bc02dd10d559310a180c4fa4bf5765dff42a3bd9be381601703ed0570baaa89c1b6ac
 Key exchange successful. Shared secrets match!
+
+![Image Description](./images/week06_screenshot2.png)
 
 ## Insights & Reflections
 
