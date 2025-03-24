@@ -6,17 +6,26 @@ In the course of this week, I tackled the **Caesar Cipher**, one of the simplest
 While letter shifting did not seem like the most complex concept to grasp, I had a hard time figuring out how to implement this cipher in code. Writing a functionaly implementation will be possible using a similar algorithm, but by breaking the algorithm step by step and apply it to both the lowercase and the uppercase letters. Along with that I learnt the limitations of the Caesar Cipher, it is not immune to **Brute force attacks** there which means only 25 possible shifts.
 ## Code Implementation: nano caesar_cipher.py
 Here is my implementation of the Caesar Cipher in Python:
-'''Python 
+
 
 def caesar_cipher(text, shift, encrypt=True):
+
     result = ""
+    
     for char in text:
+    
         if char.isalpha():
+        
             shift_amount = shift if encrypt else -shift
+            
             new_char = chr(((ord(char.lower()) - 97 + shift_amount) % 26) + 97)
+            
             result += new_char.upper() if char.isupper() else new_char
+            
         else:
+        
             result += char
+            
     return result
 
 ## Example Usage
@@ -31,6 +40,7 @@ print("Encrypted Message:", cipher_text)
 print("Decrypted Message:", caesar_cipher(cipher_text, shift_value, encrypt=False))
 
 ## Code Output
+
 Enter your message: My First Journal
 
 Enter shift value (1-25): 5
