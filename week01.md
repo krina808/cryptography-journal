@@ -6,7 +6,7 @@ In the course of this week, I tackled the **Caesar Cipher**, one of the simplest
 ## Insights and Reflections
 While letter shifting did not seem like the most complex concept to grasp, I had a hard time figuring out how to implement this cipher in code. Writing a functionaly implementation will be possible using a similar algorithm, but by breaking the algorithm step by step and apply it to both the lowercase and the uppercase letters. Along with that I learnt the limitations of the Caesar Cipher, it is not immune to **Brute force attacks** there which means only 25 possible shifts.
 
-## Code Implementation
+## Code Implementation: nano caesar_cipher.py
 Here is my implementation of the Caesar Cipher in Python:
 ```python
 def caesar_cipher(text, shift, encrypt=True):
@@ -19,17 +19,23 @@ def caesar_cipher(text, shift, encrypt=True):
         else:
             result += char
     return result
+
 ## Example Usage
 plain_text = input("Enter your message: ")
 shift_value = int(input("Enter shift value (1-25): "))
 cipher_text = caesar_cipher(plain_text, shift_value)
 print("Encrypted Message:", cipher_text)
 print("Decrypted Message:", caesar_cipher(cipher_text, shift_value, encrypt=False))
-Code Output
+
+
+## Code Output
 Enter your message: My First Journal
 Enter shift value (1-25): 5
 Encrypted Message: Rd Knwxy Ozwsfqi
 Decrypted Message: My First Journal
+
+![Description](./images/week01_screenshot.png)
+
 ## Comparisons and Observations
 The Caesar Cipher is incredibly insecure compared to modern ciphers such as AES or RSA. However, this is helpful in developing an understanding of notions such as substitution ciphers and modular arithmetic. However, its simplicity makes it suitable for educating (what encryption is really about) and perhaps for explaining how encryption works.
 ## Challenges and Solutions
