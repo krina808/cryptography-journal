@@ -34,8 +34,6 @@ Enter shift value (1-25): 5
 Encrypted Message: Rd Knwxy Ozwsfqi
 Decrypted Message: My First Journal
 
-Screenshot: 
-![Image Description](./images/weak01_screenshot.png)
 
 
 ## Comparisons and Observations
@@ -46,5 +44,10 @@ Initially, since I tried to pass the empty value to int(), I got a ValueError. T
 ## References
 Singh, S. (2006). The Science of Secrecy from Ancient Egypt to Quantum Cryptography. https://www.math.uci.edu/~brusso/freshman6.pdf 
 
+
+
+
+Screenshot: 
+![Image Description](./images/weak01_screenshot.png)
 
 
