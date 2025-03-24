@@ -25,6 +25,22 @@ openssl pkeyutl -derive -inkey privateA.pem -peerkey publicB.pem -out secretA.bi
 # 4: Verify the Shared Secrets
 sha256sum secretA.bin secretB.bin
 
+# Executions: 
+
+
+krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ openssl genpkey -paramfile dhparam.pem -out privateA.pem
+krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ openssl pkey -in privateA.pem -pubout -out publicA.pem
+krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ openssl genpkey -paramfile dhparam.pem -out privateB.pem
+krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ openssl pkey -in privateB.pem -pubout -out publicB.pem
+krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ openssl pkeyutl -derive -inkey privateA.pem -peerkey publicB.pem -out secretA.bin
+krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ openssl pkeyutl -derive -inkey privateB.pem -peerkey publicA.pem -out secretB.bin
+krina808@DESKTOP-SQLDVQ2:~/cryptography-journal$ sha256sum secretA.bin secretB.bin
+d41b409c2b3165690141d4efa369279901144d20a832e1f9baa7839a04fdc61f  secretA.bin
+d41b409c2b3165690141d4efa369279901144d20a832e1f9baa7839a04fdc61f  secretB.bin
+
+
+
+
 ## Diffie–Hellman in Python
 # Python Code for DHKE
 from cryptography.hazmat.primitives.asymmetric import dh
