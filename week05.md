@@ -89,3 +89,19 @@ mH/vsiKZDL/jgG4QgVCyw78rqSB11ek24OgDUQ6f/ofzdZQUj2PtyzlnTqIjRA67
 zwIDAQAB
 -----END PUBLIC KEY-----
 
+## 4. RSA Encryption and Decryption in OpenSSL
+✅ Encrypt Using pkeyutl
+
+openssl pkeyutl -encrypt -in message.txt -pubin -inkey public_key.pem -out encrypted_message.bin
+
+✅ Decrypt Using pkeyutl
+
+openssl pkeyutl -decrypt -in encrypted_message.bin -inkey private_key.pem -out decrypted_message.txt
+
+✅ Check Decrypted Message
+
+cat decrypted_message.txt
+
+Output: 
+
+Hello, this is a secret message.
