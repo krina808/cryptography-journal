@@ -34,7 +34,7 @@ Enter shift value (1-25): 5
 Encrypted Message: Rd Knwxy Ozwsfqi
 Decrypted Message: My First Journal
 
-![Description](./images/week01_screenshot.png)
+![Image Description](./images/week01_screenshot.png)
 
 ## Comparisons and Observations
 The Caesar Cipher is incredibly insecure compared to modern ciphers such as AES or RSA. However, this is helpful in developing an understanding of notions such as substitution ciphers and modular arithmetic. However, its simplicity makes it suitable for educating (what encryption is really about) and perhaps for explaining how encryption works.
