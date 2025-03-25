@@ -81,10 +81,24 @@ Doing aes-128-cbc for 3s on 256 size blocks: 3296810 aes-128-cbc's in 2.80s
 
 Doing aes-128-cbc for 3s on 1024 size blocks: 940348 aes-128-cbc's in 2.98s
 
+Screenshot: 
+![Image Description](./images/week03_screenshot.png)
+
+# Attacks on Systems:
+DES using ECB mode is shown to be vulnerable to pattern attacks, because of identical plaintext blocks resulting in identity ciphertexts which allow you to deduce information. For those attack, AES in CBC mode has used Initialization Vector (IV) which makes it more resistant to such attacks.
+
+# Difficulties in Understanding Security Systems:
+Initially DES encryption did not make too much sense for me because neither did I know that DES encryption takes 8 byte blocks. I only understood it after getting the concept of padding and how the IV plays a role in AES CBC mode.
+
+# Links to Security Systems:
+OWASP
+Link: OWASP
+
+Summary: Web applications security is a complicated issue and while there are excellent guides, book and articles out there for this area, there is no single source to provide guidance on how to secure a web app. It consists of guides, tools and frameworks to protect organizations’ systems from common vulnerabilities like SQL injection, cross site scripting (XSS) and broken authentication among other things. The OWASP Top 10, a well-known list of the most important web application security issues, is a must for developers and security professional.
+
 ## Insights and Reflections
 
 AES in CBC mode is more secure and efficient compared to DES in ECB mode, as it introduces randomness using an Initialization Vector (IV) and prevents identical ciphertext for repeated plaintext. The padding issue observed in DES encryption highlights the importance of ensuring plaintext sizes are aligned with block sizes. Additionally, AES-128 demonstrated superior performance, making it a preferred choice for modern encryption needs.
 
-Screenshot: 
-![Image Description](./images/week03_screenshot.png)
+
 
