@@ -1,9 +1,9 @@
 ## Week 08 Journal Activity
 ## Algorithms Used
 
--SHA-256: A secure cryptographic hash function that produces a 256-bit hash value. It is widely used in blockchain, digital signatures, and data integrity checks.
+-SHA-256:  A secure cryptographic hash function which produces a 256 bit hash value. Very frequently used in blockchain, digital signatures and data integrity checks.
 
--HMAC (Hash-based Message Authentication Code): Uses a secret key and hash function (e.g., SHA-256) to authenticate messages and ensure data integrity.
+-HMAC (Hash-based Message Authentication Code):  It authenticates messages using a secret key and an available hash function (SHA-256, etc) to ensure data integrity.
 
 ## Python Code for Simulation
 # SHA-256 Hashing
@@ -11,7 +11,7 @@
 running: nano SHA-256_Hashing.py
 ![Image Description](./images/week08_sha-256-hashing.png)
 
-SHA-256 generates a fixed-length 64-character hexadecimal hash, ensuring data integrity. Even a small change in input results in a drastically different hash output due to the avalanche effect.
+In other words, SHA-256 produces a fixed 64 characters in length hexadecimal hash which verifies data integrity. The avalanche effect guarantees that even a little change in input will yield a completely different hash output..
 
 # HMAC using SHA-256
 
@@ -20,11 +20,11 @@ running: nano HMAC_SHA-256.py
 ![Image Description](./images/week08_HMAC_sha-256.png)
 
 
-HMAC ensures data authenticity, as any change in data without the correct key will produce a different HMAC. It is resistant to attacks like replay attacks, ensuring data security in client-server communication.
+This provides data authentication that, if data is changed and the correct key is formed, an HMAC will be different. Data security during client server communication is provided by it and is resistant to attacks like replay attack.
 
 ## Insights and Reflections
--Hash functions provide robust security for data integrity by ensuring any small change in the input results in a significantly different hash output (avalanche effect).
+-With robust security for the data integrity, it allows any small change in an input to create a very different hash output (avalanche effect).
 
--HMAC ensures both data authenticity and integrity by adding a layer of protection with a secret key, making it useful in secure communication protocols like TLS and SSL.
+-Depending on the protocol application, HMAC helps provide some protection by adding a layer of security through a secret key - which is used to make secure communication protocols like TLS and SSL secure.
 
--While SHA-256 is collision-resistant, it is computationally expensive, so choosing algorithms based on use case scenarios is crucial.
+-SHA256 is resistant to collisions but computationally expensive, used in real life, it has to be chosen algorithm based case by case.
