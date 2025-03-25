@@ -68,6 +68,7 @@ It was difficult to understand the intricacies of cryptographic protocols, but p
 # Links to and Summaries of Websites/Papers/Software on Security Systems and Their Attacks
 
 Google Security Blog - RSA Key Exchange Vulnerability (Logjam Attack)
+
 link: https://security.googleblog.com/2015/06/announcing-poodle-bug-bounty-and.html
 
 This article talks about the Logjam attack, an attack upon weak groups of the Diffie-Hellman used in the key exchange process. Attacks would be able to force the server to use smaller, easier to compute prime numbers which would break the encryption. In fact, as Google points out, this vulnerability is something that can be avoided by using large, secure prime numbers in Diffie-Hellman key exchanges.
