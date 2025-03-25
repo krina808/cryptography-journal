@@ -185,6 +185,26 @@ running: nano digital_signatures.py
 
 # Observations
  There were various algorithms that were implemented to encrypt data, message authentication such as AES, RSA and HMAC through digital signatures to prevent modification of sequence and content, and to prevent repudiation. These cryptographic methods were all practical used in each exercise.
+
+# Illustrating Attacks on Systems
+A Man-in-the-Middle (MitM) attack is but one example of a common attack on systems that rely on cryptography, namely one where the attacker tries to either intercept or alter communications between two parties. Attacks can be performed if encryption like RSA is not applied correctly (missing proper key exchange mechanisms), whereby attackers position themselves between sender and receiver and capture, or modify, messages. The reason why MitM attacks fail against the systems where strong encryption (like RSA with secure key exchange) and authentication (like HMAC) are used is that it prevents unauthorized interception or modification of messages.
+
+# Explanations of Difficulties
+An issue I had when trying to grasp the correlation between various cryptographic systems, especially encryption and authentication, was to figure out how the asymmetric and symmetric encryption methods (RSA and AES) cooperate with each other. In particular, then, the initial confusion was over exchanging AES keys securely during a communication session using RSA. But when I realized that both RSA secures the key exchange and that AES is a very good tweezers for encrypting actual data, the combination of these two algorithms (or instead taking advantage of other encryption schemes which exist in the real world) made sense in the context of real life security.
  
+# Links to and Short Summaries of Websites/Papers/Software on Security Systems and Their Attacks
+
+1. OWASP Cryptographic Best Practices:
+
+Link: https://owasp.org/www-project-top-ten/
+
+Both the selection of encryption algorithms as well as key management best practices (see relatedOWASP guidelines on crypto usage from OWASP team including how to use cryptography safely, selection of encryption algorithms and key management best practices to avoid vulnerabilities like for example DES outdated algorithms).
+
+2. Understanding RSA Encryption:
+
+link: https://www.tutorialspoint.com/cryptography/rsa_algorithm.htm
+
+This resource details RSA encryption by explaining how public and private keys are created, and by giving an explanation to how data is encrypted and decrypted, which is important to understand the role that RSA plays in secure communication.
+
 # Insights and Reflections
 Through these activities, I have become well versed with how cryptography is used to ensure the Security of digital communication. The AES exercise showed the significance of the symmetric key management and the RSA exercise also demonstrated the benefits of asymmetric encryption for the secure key exchange. HMAC also proved to be a good mechanism for detecting content manipulation and sequence modification. Apart from that, the fact of digital signatures was implemented to reinforce that operational paradigm of non-repudiation of accountability in the message exchanges. In general, these exercises should demonstrate the need to pick adequate cryptographic algorithms to satisfy particular security needs.
