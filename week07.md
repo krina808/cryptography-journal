@@ -59,6 +59,19 @@ with socket.create_connection((host, port)) as sock:
 
 The simulation illustrates the way in which the client and server exchange randomly and use asymmetric encryption to generate a shared secret. This ensures that the key exchange is secure, which in our case is for encrypted communication. With the server’s public key, the pre-master secret is encrypted and with its private key it is decrypted. In this, the importance of asymmetric encryption comes up in securing key generation in TLS.
 
+# Illustrating Attacks on Systems
+Man in the middle (MitM) attack is a common attack on cryptographic systems which allows an attacker to intercept communication taking place between two parties, hence the attacker can manipulate between both the parties. In TLS handshake, assuming the attacker can impersonate server, they can intercept and modify messages in transit to the intended recipient. Nevertheless, it can be thwarted by authenticating (digital) certificates properly, for example by means of public key pinning or through the usage of certificate authorities to ensure that the certificate is valid and harmless. If they both have security correct, properly verify their connection through certificates and finally, if that communication is properly encrypted, the attack does not work.
+
+# Difficulties in Understanding Security Systems
+It was difficult to understand the intricacies of cryptographic protocols, but particularly how symmetric and asymmetric encryption are used together. Especially, it becomes difficult to grasp how the public key infrastructure (PKI), as well as the certificate authorities (CAs), interact with the key exchange protocols, such as the Diffie-Hellman. However, it was a bit hard to see how the selected algorithm decides whether Diffie Hellman or RSA would go better for certain things, given challenges such as performance and availability of attacks like logjam or padding oracle.
+
+# Links to and Summaries of Websites/Papers/Software on Security Systems and Their Attacks
+
+Google Security Blog - RSA Key Exchange Vulnerability (Logjam Attack)
+link: https://security.googleblog.com/2015/06/announcing-poodle-bug-bounty-and.html
+
+This article talks about the Logjam attack, an attack upon weak groups of the Diffie-Hellman used in the key exchange process. Attacks would be able to force the server to use smaller, easier to compute prime numbers which would break the encryption. In fact, as Google points out, this vulnerability is something that can be avoided by using large, secure prime numbers in Diffie-Hellman key exchanges.
+
 ## Insights and Reflections
 I found out better about how crucial secure communication is over the internet while analyzing TLS traffic through Wireshark. This shows how symmetric and asymmetric cryptography work together to implement the TLS handshake process. I witnessed how websites exchange and verify the certificates to establish their identity to a user. I also took note of the encrypted payloads over HTTPS to make sure that the transmitted data is confidential. Then this practical experience showed that having secure connections is so important for being able to protect data privacy and prevent the spreading of cyber threats.
 
