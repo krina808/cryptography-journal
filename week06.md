@@ -68,6 +68,19 @@ Key exchange successful. Shared secrets match!
 
 ![Image Description](./images/week06_screenshot2.png)
 
+# Systems and Explanation of Success/Failure: Illustrating Attacks
+The man in the middle (MITM) attack is a common way to attack systems where an attacker intercepts communication between two parties and may change or listen to their messages. In the case of Diffie–Hellman key exchange the attacker relies on an MITM attack, which is successful if the attacker can intercept public keys exchanged between the parties and substituting those with its own public keys. In this case, the attacker would be able to derive two separate shared secrets with each party. Nevertheless, this attack will fail if the parties involved both authenticate communication parties (e.g., with digital certificates or out of band proof) before initiating the key exchange. Authentication of MITM attack eliminates compromised security, while without authentication it can be fatal.
+
+# Difficulties in Understanding Security Systems and Their Relation
+The one difficulty I had with understanding security systems in the case of Diffie–Hellman key exchange was indeed hard to grasp mathematically, how the algorithm worked: the mod exponentiation, and the discrete logarithms problem. Another thing that was challenging to understand was the interrelationship of security protocols together (e.g. How DHKE supports having encryption systems like AES active in secure communication), being dependent of underlying mathematical knowledge combined of thorough but complex practice.
+
+# Links to and Short Summaries of Websites/Papers/Software on Security Systems and Their Attacks
+
+OWASP (Open Web Application Security Project) – OWASP Top Ten
+link: https://owasp.org/www-project-top-ten/ 
+
+This is a complete list of the 10 most critical web application security risks. It specifies vulnerabilities, including SQL injection, cross site scripting (XSS) as well as broken authentication. Therefore it also describes how these vulnerabilities are exploited in web applications and how to mitigate them.
+
 ## Insights & Reflections
 
 The Diffie–Hellman Key Exchange (DHKE) algorithm is a secure affair for two parties to establish a shared secret over an insecure channel, the basis for cryptography. DHKE prevents an attacker from obtaining the shared secret even if intercepted values are used by creating a shared secret that is dependent on large prime numbers and using the mathematical properties of modular arithmetic such that even after intercepting the exchanged values there is no easy way to derive the shared secret while solving the discrete logarithm problem. When it came to implementing the algorithm on Python, I realized how both parties create their public keys and what a common secret can be for both using each other’s public key. It was evident that readers must pick prime numbers and private keys safely, poor choices could compromise the system to an attack. Moreover, it illustrated the possibility of a man-in-the-middle attack and also the necessity of authentication mechanisms to avoid such a risk. The whole procedure of implementing DHKE helped me understand secure key exchange protocols better and what they are for in the world of modern cryptography.
