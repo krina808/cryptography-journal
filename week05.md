@@ -113,5 +113,25 @@ Hello, this is a secret message.
 ![Image Description](./images/week05_screenshot2.png)
 
 
+# Illustrating Attacks on Systems
+The Man in the Middle (MITM) attack is one of the common attack on cryptographic systems. This means that an attacker intercepts and may modify the communication among two parties. Weaker systems such as defective key management, insecure or unverified communications, among other things, make these attacks successful. Such attacks cannot happen if proper encryption protocols (for example, TLS) and authentication mechanisms are implemented, as the attacker cannot decipher or modify messages without the decryption key.
+
+# Difficulties in Understanding Security Systems
+The security protocols like encryption, authentication and access control can be challenging to the play between them and this understanding is essential. There are strengths, weaknesses and proper contexts for use for each protocol. Thus it is a challenge to integrate them such that the system is both secure and efficient as a flaw in any one protocol paces a direct threat to the security of the entire system.
+
+# Links to and Short Summaries of Websites/Papers/Software on Security Systems and Their Attacks
+
+OWASP Top 10
+Link; https://www.owasptopten.org/
+
+An all around guide by OWASP, that elaborates 10 most critical web application security risks, and discusses about each risk, how much it affects the system, and the available recommendations.
+Link: 
+
+NIST SP 800-53A 
+
+Link: https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final 
+
+A NIST publication that outlines the means by which security and privacy risks can be managed with a set of detailed security and privacy controls applicable for federal information systems.
+
 ## Insights and Reflections
 -The practical implementation of public key cryptography was learnt from working with RSA using OpenSSL. As an instance of how need to adapt to the updated cryptographic standards in OpenSSL 3.0. the rsautl uses it, but pkeyutl from where at the moment of writing OpenSSL 3.0. Also, the idea of separating the public and private keys is the underlying principle of symmetric encryption. However, confidentiality is maintained as encrypting with the public key ensures that only the private key can decrypt the message. Key management was also reinforced in this exercise as permanent loss of access to the encrypted data would result in the loss of the private key. Additionally, the limitations of RSA, e.g., inefficiency in large data encryption, emphasized the need for incorporation of hybrid, RSA equipped with symmetric algorithms. In summary, through applying RSA with OpenSSL, the processes of applying RSA in the area of secure communication and the underlying difficulties encountered when utilized are sorted out logically.
