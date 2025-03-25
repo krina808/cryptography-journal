@@ -92,7 +92,7 @@ Initially DES encryption did not make too much sense for me because neither did 
 
 # Links to Security Systems:
 OWASP
-Link: OWASP
+Link: https://owasp.org/ 
 
 Summary: Web applications security is a complicated issue and while there are excellent guides, book and articles out there for this area, there is no single source to provide guidance on how to secure a web app. It consists of guides, tools and frameworks to protect organizations’ systems from common vulnerabilities like SQL injection, cross site scripting (XSS) and broken authentication among other things. The OWASP Top 10, a well-known list of the most important web application security issues, is a must for developers and security professional.
 
