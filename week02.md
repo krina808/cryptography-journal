@@ -173,7 +173,19 @@ Decryption Process:
 1.	Frequency Analysis: Assumed 'e' as the most frequent letter.
 2.	Reverse Caesar Shifts: Checked all shifts for readable text.
 3.	Decrypted Text: "thesolutionwascomplex"
-   
+
+# Illustrating Attacks on Systems:
+In this case, the brute force attack on the Caesar cypher succeeded because it takes place when the cipher has a small keyspace (1 – 25) and any shift is tried, thus decrypting the message. However, with stronger ciphers such as Playfair or rail fence this is less effective as their keyspace is larger and their encryption processes more complex and harder to automate to execute effectively.
+
+# Difficulties in Understanding Security Systems:
+Particularly I had trouble understanding how a Caesar cipher’s simplicity can be both its strength and weakness. It is easy to implement and easy to understand, but it is as vulnerable to brute force as anything can be. Not only that, the Playfair cipher uses a 5x5 matrix and the Rail Fence cipher uses a zigzag pattern that made understanding how they were decoded more tricky than the simpler Caesar cipher.
+
+# OWASP (Open Web Application Security Project)
+
+Link: https://owasp.org/
+
+Summary: The free and community driven resources to understand and mitigate security risks in web application are provided by OWASP. It contains guides, tools and frameworks intended for protecting your organisations from common vulnerabilities such as SQL injection, cross site scripting (XSS) and broken authentication. The OWASP Top 10, the most recognized list of the most critical web application security risks is a must have source for developers and security professionals.
+
 ## Insights and Reflections
 
 1. **Understanding Classical Ciphers:**  
@@ -185,6 +197,5 @@ Decryption Process:
 
 4. **Practical Use of Pycipher:**  
    -   Pycipher was a handy exercise in seeing how embedded software tools can take care of said encryption and decryption.  
-
 
 
