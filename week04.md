@@ -75,6 +75,19 @@ Then run: python3 sbc_cbc.py
 Ciphertext (C1): 1000000
 ![Image Description](./images/week04_screenshot2.png)
 
+
+# Attacks on Systems:
+This week’s activity taught us that CBC mode offers higher security than ECB owing to lack of pattern recognition in ciphertext. The encryption is however subject to attacks such as IV reuse or poor key management. In CBC mode, we reuse the same IV and have identical ciphertexts for the blablabla of the same plaintext, giving attackers a hint regarding patterns.
+
+# Difficulties in Understanding Security Systems:
+However, the importance of IV management in CBC mode was something that I could not make sense of. It turned out that strong encryption alone would not prevent complete decryption when IV reuse or poor randomization is possible.
+
+# Links to Security Systems:
+OWASP Cryptography Cheat Sheet
+
+Link: [OWASP Cryptography Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)
+
+Owasp has a great guide with best practices and pitfalls for implementing cryptography, including key management, algorithms, avoiding common blunders such as failure to properly manage IV.
 ## Insights & Reflections: 
 -For this activity I tuckered out a simple block cipher (SBC) in Cipher Block Chaining (CBC) mode to encrypt the plaintext. CBC mode introduced another way to provide additional security in case of identical blocks of plaintext by requiring use of an initialization vector (IV). In this way the patterns within encrypted data where otherwise possible are in this effectively mitigated, as in, for example, ECB. Implementing SBC I’ve noted how the XOR operations are used during the processes of encryption and chaining, the operations are based on the common term - the operation of XOR depends on both the plaintext between two ciphertext blocks. This induces diffusion and strengthens security of the encryption. Moreover, the restricted use of a small block size and insecure key generation were also highlighted as the inadequacies of SBC for genuine applications, therefore, they argued the necessity of using a more robust algorithms such as AES. In adding to the hands-on approach, it further helped me understand the relevance of the principle of randomness behind IV selection as well as key management struggles. Through this exercise I gained knowledge as to how encryption algorithms work in real life to ensure the security of sensitive information.
 
