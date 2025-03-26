@@ -1,10 +1,49 @@
 # Week 01 - Cryptography Journal
 
+
 ## Topic Overview
 In the course of this week, I tackled the **Caesar Cipher**, one of the simplest and yet most popular branch of encryption techniques. The method shifts each plaintext letter a predetermined number of positions to lower alphabetical positions. This encryption method grants basic protection which seems insufficient compared to current security measures yet it supports fundamental concepts of historic cryptography systems.
-## Insights and Reflections
-While letter shifting did not seem like the most complex concept to grasp, I had a hard time figuring out how to implement this cipher in code. Writing a functionaly implementation will be possible using a similar algorithm, but by breaking the algorithm step by step and apply it to both the lowercase and the uppercase letters. Along with that I learnt the limitations of the Caesar Cipher, it is not immune to **Brute force attacks** there which means only 25 possible shifts.
-## Code Implementation: nano caesar_cipher.py
+# Installing virtual machine; 
+
+![Image Description](./images/1.png)
+
+# Installing Ubuntu
+![Image Description](./images/2.png)
+
+# Git Repository  connceting: 
+Applying: ssh-keygen -t rsa -b 4096 -C "patel.krina808@gmail.com"
+
+Start SSH Agent and Add Your Key:
+
+Ensure the SSH agent is running:  eval "$(ssh-agent -s)"
+
+SSH key: ssh-add ~/.ssh/id_rsa
+
+SSH Key:cat ~/.ssh/id_rsa.pub
+
+and adding  SSH Key to mt GitHub.
+
+Test the Connection: sucessfull, see screenshot below: 
+
+![Image Description](./images/3.png)
+
+# IInstall Pycipher for Python: 
+Running:
+
+sudo apt update
+
+sudo apt install python3-pip python3-venv
+
+python3 -m venv myenv
+
+source myenv/bin/activate
+
+pip install pycipher
+
+
+![Image Description](./images/4.png)
+
+# Adding a test on  Implementation: nano caesar_cipher.py
 Here is my implementation of the Caesar Cipher in Python:
 
 def caesar_cipher(text, shift, encrypt=True):
@@ -51,6 +90,15 @@ Decrypted Message: My First Journal
 Screenshot: 
 ![Image Description](./images/week01_screenshot.png)
 
+# Connecting Using PuTTY: 
+- Installing Putty: 
+
+![Image Description](./images/5.png)
+
+-Connceting to my Putty: 
+![Image Description](./images/6.png)
+
+
 # Illustrating Attacks on Systems
 Brute force attack is a common attack on systems that use the Caesar Cipher, where all 25 possible shift values are tried out to see if the correct one is encountered. This attack is so effective and easy to execute that there are only 25 potential shifts for this attack, and because Caeser cipher is much more believed to be insecure than it actually is. This shows how a simple encryption method like DES, which provides very small key space and small iterations, is easy to break by brute force attacks.
 
@@ -82,5 +130,7 @@ The Caesar Cipher is incredibly insecure compared to modern ciphers such as AES 
 ## Challenges and Solutions
 Initially, since I tried to pass the empty value to int(), I got a ValueError. To resolve it, I enclosed it in a try – except and checked the type of entered value was an int before using the methods.
 
+## Insights and Reflections
+While letter shifting did not seem like the most complex concept to grasp, I had a hard time figuring out how to implement this cipher in code. Writing a functionaly implementation will be possible using a similar algorithm, but by breaking the algorithm step by step and apply it to both the lowercase and the uppercase letters. Along with that I learnt the limitations of the Caesar Cipher, it is not immune to **Brute force attacks** there which means only 25 possible shifts.
 
 
